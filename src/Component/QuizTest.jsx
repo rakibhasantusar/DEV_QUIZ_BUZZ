@@ -4,7 +4,15 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const QuizTest = ({ quizes }) => {
     const { correctAnswer, options, question, id } = quizes
-    console.log(quizes);
+    // console.log(quizes);
+    const handleCorrect = (answer) => {
+        if (answer === correctAnswer) {
+            toast.success(`Answer: ${correctAnswer}`, { autoClose: 2000 })
+        } else {
+            toast.error(`Answer: ${answer}`, { autoClose: 2000 })
+        }
+    }
+
     return (
         <div className='m-10'>
             <div className="rounded-lg px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 dark:dark:bg-gray-800 dark:dark:text-gray-100">
@@ -20,10 +28,10 @@ const QuizTest = ({ quizes }) => {
                     <div className="md:text-xl sm:text-xl mb-8 lg:text-2xl font-bold leading-none text-center" dangerouslySetInnerHTML={{ __html: question }}></div>
                 </div>
                 <ul className="grid gap-4 md:grid-cols-2 lg:grid-cols-2">
-                    <button><li className="bg-gray-600 rounded-md p-2">{options[0]}</li></button>
-                    <button><li className="bg-gray-600 rounded-md p-2">{options[1]}</li></button>
-                    <button><li className="bg-gray-600 rounded-md p-2">{options[2]}</li></button>
-                    <button><li className="bg-gray-600 rounded-md p-2">{options[3]}</li></button>
+                    <button onClick={() => handleCorrect(options[0])}><li className="bg-gray-600 rounded-md p-2">{options[0]}</li></button>
+                    <button onClick={() => handleCorrect(options[1])}><li className="bg-gray-600 rounded-md p-2">{options[1]}</li></button>
+                    <button onClick={() => handleCorrect(options[2])}><li className="bg-gray-600 rounded-md p-2">{options[2]}</li></button>
+                    <button onClick={() => handleCorrect(options[3])}><li className="bg-gray-600 rounded-md p-2">{options[3]}</li></button>
                 </ul>
             </div>
             <ToastContainer></ToastContainer>
