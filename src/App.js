@@ -4,8 +4,8 @@ import Main from './Layouts/Main';
 import Statistics from './Component/Statistics';
 import Blog from './Component/Blog';
 import Home from './Component/Home';
-import ErrorArea from './Component/ErrorArea'
-  ;
+import ErrorArea from './Component/ErrorArea';
+import Quiz from './Component/Quiz';
 
 function App() {
   const router = createBrowserRouter([
@@ -21,11 +21,19 @@ function App() {
         },
         {
           path: 'statistics',
+          loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
           element: <Statistics></Statistics>
         },
         {
           path: 'blog',
           element: <Blog></Blog>
+        },
+        {
+          path: '/:id',
+          loader: async ({ params }) => {
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
+          },
+          element: <Quiz></Quiz>
         }
       ]
     }
