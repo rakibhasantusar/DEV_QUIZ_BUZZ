@@ -5,7 +5,6 @@ import Cart from './Cart';
 
 const Home = () => {
 	const datas = useLoaderData().data
-	console.log(datas);
 	return (
 		<div>
 			<section className="dark:dark:bg-gray-800 dark:dark:text-gray-100 mt-2">

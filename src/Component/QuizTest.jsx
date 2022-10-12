@@ -4,7 +4,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const QuizTest = ({ quizes }) => {
     const { correctAnswer, options, question, } = quizes
-    console.log(quizes);
     const handleCorrect = (answer) => {
         if (answer === correctAnswer) {
             toast.success('your answer is correct', { autoClose: 2000 })
