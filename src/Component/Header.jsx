@@ -26,7 +26,7 @@ const Header = () => {
           <li>
             <Link
               to="/"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className="font-bold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               Home
             </Link>
@@ -34,7 +34,7 @@ const Header = () => {
           <li>
             <Link
               to="/statistics"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className="font-bold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               Statistics
             </Link>
@@ -42,7 +42,7 @@ const Header = () => {
           <li>
             <Link
               to="/blog"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className="font-bold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               Blog
             </Link>

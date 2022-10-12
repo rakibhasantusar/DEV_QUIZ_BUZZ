@@ -8,10 +8,10 @@ const Statistics = () => {
 	console.log(data);
 
 	return (
-		<section className='flex items-center h-screen p-14 bg-gray-100 text-gray-900 mx-auto sm:py-12 lg:py-24 lg:flex-row'>
-			<div className='container w-[80%] h-[80%] flex flex-col items-center justify-center px-5 mx-auto my-8'>
-				<div className='m-9'>
-					<h1 className='text-4xl font-bold bg-slate-800 text-white p-3 rounded'>Chart for total quiz</h1>
+		<section className='flex items-center h-screen p-5 bg-gray-100 text-gray-900 mx-auto sm:py-5 lg:py-5 lg:flex-row'>
+			<div className='container w-[80%] h-[80%] flex flex-col items-center justify-center px-2 mx-auto my-1'>
+				<div className='m-5'>
+					<h1 className='lg:text-4xl md:text-2xl sm:text-xl font-bold bg-slate-800 text-white p-3 rounded'>Chart for total quiz</h1>
 				</div>
 				<ResponsiveContainer>
 					<LineChart

@@ -5,10 +5,10 @@ const Cart = ({ data }) => {
     const { id, name, logo, total } = data
     return (
         <div className="flex flex-col transition duration-300 bg-gray-800 rounded shadow-sm hover:shadow">
-            <div className="relative w-full h-48">
+            <div className="relative w-full h-[80%] border-b-2 border-solid border-slate-500">
                 <img
                     src={logo}
-                    className="object-cover-fill  w-full h-full "
+                    className="object-cover "
                     alt="Plan"
                 />
             </div>
@@ -16,7 +16,7 @@ const Cart = ({ data }) => {
                 <div>
                     <div className="text-2xl text-white font-semibold">{name}</div>
                     <div className="mt-1 mb-4 mr-1 text-white text-lg  sm:text-lg">
-                        Total quiz:<span className='dark:dark:text-yellow-400 font-bold'> {total}</span>
+                        Total quiz:<span className='dark:dark:text-blue-300 font-bold'> {total}</span>
                     </div>
                 </div>
                 <Link
