@@ -28,7 +28,7 @@ const QuizTest = ({ quizes }) => {
                     <div className="md:text-xl sm:text-xl mb-8 lg:text-2xl font-bold leading-none text-center" dangerouslySetInnerHTML={{ __html: question }}></div>
                 </div>
                 <ul className="grid gap-4 md:grid-cols-2 lg:grid-cols-2">
-                    <button onClick={() => handleCorrect(options[0])}><li className="bg-gray-600 rounded-md p-2">{options[0]}</li></button>
+                    <button onClick={() => handleCorrect(options[0])}> <li className="bg-gray-600 rounded-md p-2">{options[0]}</li></button>
                     <button onClick={() => handleCorrect(options[1])}><li className="bg-gray-600 rounded-md p-2">{options[1]}</li></button>
                     <button onClick={() => handleCorrect(options[2])}><li className="bg-gray-600 rounded-md p-2">{options[2]}</li></button>
                     <button onClick={() => handleCorrect(options[3])}><li className="bg-gray-600 rounded-md p-2">{options[3] || 'amar banano'}</li></button>
